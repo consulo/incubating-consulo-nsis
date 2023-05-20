@@ -1,17 +1,17 @@
 package com.krylysov.nsisplugin;
 
-
-import com.intellij.openapi.editor.colors.TextAttributesKey;
-import com.intellij.openapi.fileTypes.SyntaxHighlighter;
-import com.intellij.openapi.options.colors.AttributesDescriptor;
-import com.intellij.openapi.options.colors.ColorDescriptor;
-import com.intellij.openapi.options.colors.ColorSettingsPage;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.colorScheme.TextAttributesKey;
+import consulo.colorScheme.setting.AttributesDescriptor;
+import consulo.colorScheme.setting.ColorDescriptor;
+import consulo.language.editor.colorScheme.setting.ColorSettingsPage;
+import consulo.language.editor.highlight.SyntaxHighlighter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.*;
 import java.util.Map;
 
+@ExtensionImpl
 public class NsisColorSettingsPage implements ColorSettingsPage {
     private static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{
             new AttributesDescriptor("Compiler command", NsisSyntaxHighlighter.COMPILER_COMMAND),
@@ -19,12 +19,6 @@ public class NsisColorSettingsPage implements ColorSettingsPage {
             new AttributesDescriptor("String", NsisSyntaxHighlighter.STRING),
             new AttributesDescriptor("Number", NsisSyntaxHighlighter.NUMBER),
     };
-
-    @Nullable
-    @Override
-    public Icon getIcon() {
-        return NsisFileType.INSTANCE.getIcon();
-    }
 
     @NotNull
     @Override

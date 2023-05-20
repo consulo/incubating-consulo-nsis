@@ -1,15 +1,16 @@
 package com.krylysov.nsisplugin;
-import com.intellij.lexer.FlexLexer;
-import com.intellij.psi.tree.IElementType;
+
 import com.krylysov.nsisplugin.psi.NsisTypes;
-import com.intellij.psi.TokenType;
+import consulo.language.ast.IElementType;
+import consulo.language.ast.TokenType;
+import consulo.language.lexer.LexerBase;
 
 %%
 
 %class NsisLexer
-%implements FlexLexer
+%extends LexerBase
 %unicode
-%function advance
+%function advanceImpl
 %type IElementType
 %ignorecase
 %eof{  return;

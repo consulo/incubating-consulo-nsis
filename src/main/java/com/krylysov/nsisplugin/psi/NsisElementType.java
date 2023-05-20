@@ -1,7 +1,7 @@
 package com.krylysov.nsisplugin.psi;
 
-import com.intellij.psi.tree.IElementType;
 import com.krylysov.nsisplugin.NsisLanguage;
+import consulo.language.ast.IElementType;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 

@@ -1,7 +1,6 @@
 package com.krylysov.nsisplugin.psi;
 
-
-import com.intellij.psi.tree.IElementType;
+import consulo.language.ast.IElementType;
 
 public interface NsisTypes {
     IElementType BLOCK_DECLARATION = new NsisTokenType("BLOCK_DECLARATION");

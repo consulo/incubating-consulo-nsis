@@ -1,11 +1,11 @@
 package com.krylysov.nsisplugin;
 
-import com.intellij.openapi.fileTypes.LanguageFileType;
-import com.intellij.openapi.fileTypes.StdFileTypes;
+import consulo.language.file.LanguageFileType;
+import consulo.localize.LocalizeValue;
+import consulo.platform.base.icon.PlatformIconGroup;
+import consulo.ui.image.Image;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import javax.swing.*;
 
 public class NsisFileType extends LanguageFileType {
     public static final NsisFileType INSTANCE = new NsisFileType();
@@ -16,14 +16,14 @@ public class NsisFileType extends LanguageFileType {
 
     @NotNull
     @Override
-    public String getName() {
-        return "NSIS script";
+    public String getId() {
+        return "NSIS_SCRIPT";
     }
 
     @NotNull
     @Override
-    public String getDescription() {
-        return "NSIS installer script";
+    public LocalizeValue getDescription() {
+        return LocalizeValue.localizeTODO("NSIS installer script");
     }
 
     @NotNull
@@ -34,7 +34,7 @@ public class NsisFileType extends LanguageFileType {
 
     @Nullable
     @Override
-    public Icon getIcon() {
-        return StdFileTypes.PLAIN_TEXT.getIcon();
+    public Image getIcon() {
+        return PlatformIconGroup.filetypesText();
     }
 }

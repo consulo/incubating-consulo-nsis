@@ -1,8 +1,9 @@
 package com.krylysov.nsisplugin;
 
-import com.intellij.lang.Language;
+import consulo.language.Language;
 
-public class NsisLanguage extends Language {
+public class NsisLanguage extends Language
+{
     public static final NsisLanguage INSTANCE = new NsisLanguage();
 
     private NsisLanguage() {

@@ -1,42 +1,15 @@
-<idea-plugin version="2">
+<consulo-plugin url="https://github.com/consulo/incubating-consulo-nsis">
   <id>com.krylysov.nsisplugin</id>
   <name>NSIS plugin</name>
-  <version>0.2.0</version>
+  <version>SNAPSHOT</version>
   <vendor email="artem@krylysov.com" url="https://github.com/akrylysov/intellij-nsis">Artem Krylysov</vendor>
+  <experimental>true</experimental>
+  <tags>
+    <tag>build</tag>
+  </tags>
 
   <description><![CDATA[
     NSIS syntax highlighting plugin
     ]]></description>
 
-  <change-notes><![CDATA[
-      Initial version.
-    ]]>
-  </change-notes>
-
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="131"/>
-
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-
-  <depends>com.intellij.modules.lang</depends>
-
-  <extensions defaultExtensionNs="com.intellij">
-    <fileTypeFactory implementation="com.krylysov.nsisplugin.NsisFileTypeFactory"/>
-    <lang.syntaxHighlighterFactory key="nsis" implementationClass="com.krylysov.nsisplugin.NsisSyntaxHighlighterFactory"/>
-    <colorSettingsPage implementation="com.krylysov.nsisplugin.NsisColorSettingsPage"/>
-  </extensions>
-
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
-
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
-
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
-
-</idea-plugin>
+</consulo-plugin>
